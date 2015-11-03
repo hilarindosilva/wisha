@@ -1,0 +1,18 @@
+<h1>Listing Users</h1>
+ 
+ <%= link_to 'New User', new_user_path %>
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Authentication Type</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.username %></td>
+      <td><%= user.name %></td>
+      <td><%= user.auth_type %></td>
+    </tr>
+  <% end %>
+</table>
